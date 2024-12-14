@@ -10,19 +10,60 @@
 void main()
 {
     //definir variables
-    int edad;
-    int MateriasA,MateriasD;//Maerias apobadas,Materias desaprobadas
+    int NrAlumnos=0,contador=0;
+    int edad,MateriasA,MateriasD;//Maerias apobadas,Materias desaprobadas
+    int AlumDes=0;// cantidad de alumnos mayores a 21 años y que tengan mas de dos materias desaprobadas
+    float porcentajeFinalA,porcentajeFinalD,NrMaterias;//Porcentaje final A aprobadas y d Desaprobadas
+   
+    //Ingresa la cantidad de alumnos 
+    printf("Ingrese la cantidad de alumnos: ");
+    scanf("%d",&NrAlumnos);
 
-    //Pregntar la edad  
-    printf("Ingrese la edad: ");
-    scanf("%d",&edad);
+    do
+    {
+        //Preguntar la edad  
+        do
+        { 
+            printf("Ingrese la edad: ");
+            scanf("%d",&edad);
+        }   
+        while (edad < 0);
+        //Preguntar la cantidad de materia aprobadas  
+        do
+        { 
+            printf("Ingrese la cantidad de materias aprobadas: ");
+            scanf("%d",&MateriasA); 
+        }   
+        while (MateriasA < 0);
+        //Preguntar la cantidad de materia Desaprobadas
+        do
+        { 
+            printf("Ingrese la cantidad de materias Desaprobadas: ");
+            scanf("%d",&MateriasD);
+        }   
+        while (MateriasD < 0);
+        
+        //Cantidad de alumnos mayores a 21 años de edad que tienen más de dos materias finales desaprobadas
+        if(edad >= 21 && MateriasD > 2)
+        {
+            AlumDes++;
+        }
 
-    printf("Ingrese la cantidad de materias aprobadas: ");
+        //calculo de porcentajes 
+        NrMaterias = MateriasA + MateriasD;
+        porcentajeFinalA = ((float)MateriasA /NrMaterias )*100;
+        porcentajeFinalD = ((float)MateriasD /NrMaterias)*100;
 
 
-
-
-
-
-
+        printf("El porcentaje de materias aprobadas es de %.2f%% \n",porcentajeFinalA);
+        printf("El porcentaje de materias desaprobadas es de %.2f%%\n",porcentajeFinalD);
+        
+        if (MateriasA == 3 * MateriasD)
+        {
+            printf("El alumno %d tiene el triple de materias aprobadas que desaprobadas y su edad es %d\n", contador + 1, edad);
+        }
+        contador ++;
+    } while (contador != NrAlumnos);
+    
+    printf("\n\nLa cantidad de alumnos con mas de 21 años y mas de 2 materias desaprobadas es de %d.",AlumDes);
 }
