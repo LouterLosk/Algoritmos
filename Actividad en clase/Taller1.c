@@ -1,4 +1,8 @@
 #include <stdio.h>
+/*Imprima  la  cantidad  de  mujeres  mayores  de  edad 
+ y  la  cantidad  de  hombres  mayores  de  edad  de  un  total  de  N  personas.  
+ Muestre  también sus porcentajes*/
+
 
 void main()
 {
