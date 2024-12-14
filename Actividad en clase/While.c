@@ -11,7 +11,7 @@ Si dice si, se debe permitir repetir el programa.*/
 //constante de la edad de Matusalen
 #define edad 969
 
-void main()
+int main()
 {
     //definir variables
     int Intento;//Variable de ingreso de datos de edad
@@ -25,52 +25,50 @@ void main()
     printf("¿Quires jugar?\n");
     printf("Si(1)    No(0)\n");
     scanf("%d",&seguir);
-do
-{
-        
-        if (seguir == 1)
+    
+    while (seguir == 1)
+    {
+        contador = 0;
+        while (contador < 3)
         {
-            contador = 0;
-            do
+            //Pregunta la edad
+            printf("Ingrese la edad: ");
+            scanf("%d",&Intento);
+            //Comprobar si gana 
+            if (Intento == edad)
             {
-                //Pregunta la edad
-                printf("Ingrese la edad: ");
-                scanf("%d",&Intento);
-                //Comprobar si gana 
-                if (Intento == edad)
+                printf("\nGanaste!!!!\n");
+                contador = 3;
+            }
+            else
                 {
-                    printf("\nGanaste!!!!\n");
-                    contador = 3;
-                }
-                else
+                    printf("Vuelve a intentarlo.\n\n");
+                    //demostrar si la edad es mayor
+                    if (Intento <edad)
                     {
-                        printf("Vuelve a intentarlo.\n\n");
-                        //demostrar si la edad es mayor
-                        if (Intento <edad)
-                        {
-                            printf("La edad es mas grande.\n");
-                        }
-                        else
-                        {
-                            //demostrar si la edad es menor
-                            if (Intento > edad)
-                            {
-                                printf("La edad es mas pequña.\n\n");
-                            }
-                        }
-                            contador++;   
+                        printf("La edad es mas grande.\n");
                     }
-            } while (contador != 3 );
+                    else
+                    {
+                        //demostrar si la edad es menor
+                        if (Intento > edad)
+                        {
+                            printf("La edad es mas pequña.\n\n");
+                        }
+                    }
+                    contador++;   
+                }
         }
-    //se pregunta si se quiere volver a jugar
-    printf("¿Quires volver a jugar?\n");
-    printf("Si(1)    No(0)\n");
-    scanf("%d",&seguir); 
-} while (seguir != 0);
-
-        
-
-
-
+        //Mensaje final si no se acierta la edad después de tres intentos
+        if (contador == 3 && Intento != edad) 
+        {
+            printf("Lo siento, no acertaste. Inténtalo nuevamente.\n");
+        }    
+        //se pregunta si se quiere volver a jugar
+        printf("¿Quires volver a jugar?\n");
+        printf("Si(1)    No(0)\n");
+        scanf("%d",&seguir); 
+    }
+    return 0;
 }
 
