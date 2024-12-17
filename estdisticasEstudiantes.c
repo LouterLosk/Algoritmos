@@ -12,19 +12,20 @@ Se debe subir el programa en C.*/
 
 int main()
 {   
-    int Aprobados=0,Desaprobados=0;
+    int Aprobados=0,Desaprobados=0;//Contador de Aprobados y Desapobados
     float promedioClase;
-    float notaMayor,notaMenor = 10; 
+    float notaMayor = 0,notaMenor = 10;//VAriable de notaMayor,NotaMenor
     int NrStudents;//Ingreso el numero de estudiantes
     float Nota,Nota1;//Variable de ingreso nota
     int contador = 0; //Variable que nos ayuda a contar 
-    printf("Cuantos estudiantes se van a ingresar: ");   
-    scanf("%d",&NrStudents);
-
-
     do
     {
-        
+      printf("Cuantos estudiantes se van a ingresar: ");   
+    scanf("%d",&NrStudents);  
+    } while (NrStudents <= 0);
+    //Valida los valores que se ingresan
+    do
+    {
         do
         {
             printf("Ingrese la Nota del estudiante %d: ",contador + 1);
@@ -32,7 +33,7 @@ int main()
             //validar si la nota esta en el rango dterminado 0-10
             if (Nota >= 0 && Nota <= 10)
             {
-                //Comprobar si esta aprobado
+                //Comprobar si esta aprobado o desaprobado
                 if (Nota >= 7)
                 {
                     Aprobados ++;
@@ -62,6 +63,7 @@ int main()
 
         } while (Nota < 0 || Nota > 10);
     } while (NrStudents != contador);
+    //Salida de datos
     printf("La cantidad de estudiantes apobados es de %d\n",Aprobados );
     printf("La cantidad de estudiantes desaprobados es de %d\n",Desaprobados );
     printf("El promedio de la clase es de %.2f\n",(promedioClase / (float)NrStudents));
