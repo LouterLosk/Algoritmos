@@ -22,3 +22,13 @@ printf("%d %d %d",x1,x2,x3)
 
 int main(){
 }
+
+/areglos
+int[] j
+
+simpre empieza en 0
+
+
+ejemplo 
+for(int i=0 ; i<= 4 ;i++)
+scanf("%d",&numero[i]
