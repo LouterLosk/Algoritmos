@@ -5,7 +5,7 @@
 /*Suma de números primos:Elabore un programa que le pida al usuario, a través del teclado, 
 un número positivo N menor que 100 y positivo. El sistema debe generar los números primos de 1 hasta N. 
 Además, deben desplegar la cantidad de numero primos que existe en ese rango. (4ptos)*/
-int primos2(){
+int primos(){
     int N;
     int cont = 0,mod;
     int i = 1;
@@ -34,12 +34,8 @@ int primos2(){
 }
 
 
-
-
-
-
 int main()
 {
-    primos2();
+    primos();
     return 0;
 }
