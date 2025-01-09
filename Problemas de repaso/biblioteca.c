@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /*Suma de números primos:Elabore un programa que le pida al usuario, a través del teclado, 
 un número positivo N menor que 100 y positivo. El sistema debe generar los números primos de 1 hasta N. 
 Además, deben desplegar la cantidad de numero primos que existe en ese rango. (4ptos)*/
@@ -29,4 +30,7 @@ int primos(){
         j = 1;
     }
 }
+
+/*Sumar 50 números dados por teclado.
+Si se detecta un número negativo, indicarlo y abandonar el bucle indicando cuántos valores se han leído hasta ese instante. (2 ptos)*/
 
