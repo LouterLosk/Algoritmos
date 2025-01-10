@@ -31,9 +31,6 @@ simpre empieza en 0
 
 ejemplo 
 for(int i=0 ; i<= 4 ;i++)
-<<<<<<< HEAD
-scanf("%d",&numero[i])
-=======
 scanf("%d",&numero[i])
 
 
@@ -70,4 +67,3 @@ git reset --soft HEAD
 	  --mix
 
 git reflog
->>>>>>> 5045eb4 (Se agrego comandos Git a Readme)
