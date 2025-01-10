@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/*Invertir un número
+Escribe un programa que invierta un número ingresado por el usuario.
+Ejemplo:
+Entrada: 1234
+Salida: 4321*/
+
 int main(){
     int Num,residuo,invertido,cont=0;
     printf("Ingrese el numero que quiere voltear: ");
