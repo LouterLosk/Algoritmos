@@ -1,0 +1,12 @@
+PROYECTO2: MÁQUINA DISPENSADORA DE BOLETOS DE AUTOBÚS 
+Descripción: 
+El programa simula una máquina de boletos: 
+1.	Solicita al usuario la distancia del viaje (en kilómetros) y calcula el costo del boleto con base en una tarifa por kilómetro. 
+2.	Pide el monto que paga el usuario y calcula el cambio. 
+3.	Devuelve el cambio en monedas de 5, 2 y 1 peso. 
+4.	Muestra un resumen con el costo del boleto, el monto pagado y el cambio entregado. 
+Requerimientos técnicos: 
+•	Uso de estructuras condicionales para validar el inicio de sesión y las operaciones. 
+•	Bucles para implementar el menú y permitir múltiples operaciones hasta que el usuario decida salir. 
+•	Cálculo dinámico del costo del boleto. 
+•	Optimización del cambio. 
