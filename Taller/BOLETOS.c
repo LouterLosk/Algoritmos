@@ -19,12 +19,12 @@ int main()
         int distancia;
         int costo = 0 ;
         int ingreso = 0;
-        int vuelto [4] = {0, 1 , 2 , 5};//total, monedas de 1, monedas de 2, monedas de 5
+        int vuelto [4] = {0, 0 , 0 , 0};//total, monedas de 1, monedas de 2, monedas de 5
         int monedas = 0;
         do
         {
             printf("El costo por kilometro es de %d pesos\n",Kilometro); 
-            printf("Ingrese la distancia del viaje(en kilómetros): \n");
+            printf("Ingrese la distancia del viaje(en kilometros): \n");
             scanf("%d",&distancia);
         } while (distancia <= 0);
         //Calculo del costo del voleto
@@ -56,6 +56,7 @@ int main()
         if (vuelto[1] > 0){
             printf("Con %.0f monedas de 1 pesos \n",(float)vuelto[1]);
         }
+        printf("-------------------------------------------------\n");
         printf("Quiere calcular otro valor? 1 = Si 0 = No\n");
         scanf("%d",&seguir);
         }

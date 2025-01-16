@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ethan/Documents/Algoritmos",
-      "program": "c:/Users/ethan/Documents/Algoritmos/build/Debug/outDebug",
+      "cwd": "c:/Users/ethan/Documents/C_Local/Algoritmos/Taller",
+      "program": "c:/Users/ethan/Documents/C_Local/Algoritmos/Taller/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
