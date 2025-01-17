@@ -9,9 +9,12 @@ int main()
 {
     int seguir;
     const int Kilometro = 3;
-    printf("Quiere calcular el precio a pagar? 1 = Si 0 = No\n");
-    scanf("%d",&seguir);
-
+    
+    do
+    {
+       printf("Quiere calcular el precio a pagar? 1 = Si 0 = No\n");
+       scanf("%d",&seguir);
+    } while (seguir < 0 || seguir >1);
     while(seguir == 1)
     {
         int distancia;
