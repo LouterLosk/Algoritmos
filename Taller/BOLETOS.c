@@ -18,7 +18,7 @@ int main()
     
     while(seguir == 1)
     {
-        int distancia;//definir variables
+        float distancia;//definir variables
         int costo = 0 ;//definir variables
         int ingreso = 0;//definir variables
         int vuelto [4] = {0, 0 , 0 , 0};//total, monedas de 1, monedas de 2, monedas de 5
@@ -27,7 +27,7 @@ int main()
         {
             printf("El costo por kilometro es de %d pesos\n",Kilometro); 
             printf("Ingrese la distancia del viaje(en kilometros): \n");
-            scanf("%d",&distancia);
+            scanf("%f",&distancia);
         } while (distancia <= 0);
         //Calculo del costo del voleto
         costo = distancia * Kilometro;
@@ -37,7 +37,11 @@ int main()
         {
             printf("Con cuanto va a pagar?\n");
             scanf("%d",&ingreso);
-            if (ingreso < costo){//informa que lo ingresado es menor al costo
+            if (ingreso < 0){
+                printf("EL costo no pude ser negativo\n");
+                printf("El costo es de %d pesos\n",costo);
+            }
+            if (ingreso > 0&& ingreso < costo){//informa que lo ingresado es menor al costo
                 printf("El valor ingresado es menor al valor del viaje,faltan %d pesos\n",costo - ingreso);
             }
         } while (ingreso < 0 || ingreso < costo);
